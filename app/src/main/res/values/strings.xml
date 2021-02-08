@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Assignment</string>
+
+    <string name="placeholder_id">Id : %d</string>
+    <string name="placeholder_category_name">Name : %s</string>
+    <string name="action_objective_2">Objective 2</string>
+    <string name="action_objective_1_part_1">Objective 1 part 1</string>
+    <string name="action_objective_1_part_2">Objective 1 part 2</string>
+    <string name="title_analytics">Analytics</string>
+    <string name="message_this_week">This week</string>
+</resources>
