@@ -1,6 +1,8 @@
 package com.anaha.assignment.data.api
 
-class ApiHelper(private val apiService: ApiService) {
+import layout.CategoryResponse
 
-    suspend fun getCategories(userKey: String) = apiService.getCategories(userKey)
+interface ApiHelper {
+
+    suspend fun getCategories(userKey: String) : CategoryResponse
 }

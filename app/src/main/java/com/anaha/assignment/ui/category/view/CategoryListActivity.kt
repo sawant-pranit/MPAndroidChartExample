@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -17,12 +18,14 @@ import com.anaha.assignment.ui.category.adapter.CategoryAdapter
 import com.anaha.assignment.ui.category.viewmodel.CategoryViewModel
 import com.anaha.assignment.utils.Constants
 import com.anaha.assignment.utils.Status
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_category_list.*
 import layout.Category
 
+@AndroidEntryPoint
 class CategoryListActivity  : AppCompatActivity(){
 
-    private lateinit var viewModel: CategoryViewModel
+    private val viewModel: CategoryViewModel by viewModels()
     private lateinit var adapter: CategoryAdapter
 
     companion object {
@@ -32,7 +35,7 @@ class CategoryListActivity  : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layout.activity_category_list)
-        setupViewModel()
+        // setupViewModel()
         setupUI()
         setupObserver()
     }
@@ -83,8 +86,8 @@ class CategoryListActivity  : AppCompatActivity(){
     }
 
     private fun setupViewModel() {
-        viewModel = ViewModelProviders.of(
+        /*viewModel = ViewModelProviders.of(
             this, ViewModelFactory(ApiHelper(RetrofitBuilder.apiService))
-        ).get(CategoryViewModel::class.java)
+        ).get(CategoryViewModel::class.java)*/
     }
 }

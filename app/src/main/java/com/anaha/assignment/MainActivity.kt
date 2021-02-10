@@ -5,8 +5,10 @@ import android.os.Bundle
 import com.anaha.assignment.ui.analytics.view.AnalyticsActivity
 import com.anaha.assignment.ui.category.view.CategoryListActivity
 import com.anaha.assignment.ui.home.view.HomeActivity
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

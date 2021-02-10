@@ -4,7 +4,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitBuilder {
-    private const val BASE_URL = "https://developers.zomato.com/api/v2.1/"
+    const val BASE_URL = "https://developers.zomato.com/api/v2.1/"
 
     private fun getRetrofit() : Retrofit {
         return Retrofit.Builder()

@@ -1,12 +1,14 @@
 package com.anaha.assignment.ui.category.viewmodel
 
+import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.anaha.assignment.data.repository.CategoryRepository
 import com.anaha.assignment.utils.Resource
+import dagger.hilt.android.scopes.ViewModelScoped
 import kotlinx.coroutines.Dispatchers
 
-class CategoryViewModel(private val categoryRepository: CategoryRepository) : ViewModel() {
+class CategoryViewModel @ViewModelInject constructor (private val categoryRepository: CategoryRepository) : ViewModel() {
 
     fun getCategories(userKey: String) = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
